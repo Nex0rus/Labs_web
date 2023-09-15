@@ -1,0 +1,100 @@
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  background-color: #f2f2f2;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+.logo {
+  float: left;
+}
+
+.site-name {
+  float: left;
+  margin-left: 10px;
+}
+
+/* Стили для панели с фильтрами */
+.filter-panel {
+  display: flex;
+  flex-direction: column;
+  float: left;
+  width: 30%;
+}
+
+/* Стили для строки поиска */
+.search-bar {
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.venues-panel {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Стили для блока с лентой заведений */
+.venue-feed {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  float: right;
+  width: 70%;
+  overflow-y: scroll;
+}
+
+/* Стили для карточки заведения */
+.venue-card {
+  /*clear: both;*/
+  margin-top: 20px;
+}
+
+.venue-name {
+  font-weight: bold;
+}
+.venue-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.venue-photo {
+  width: 70%;
+  height: auto;
+}
+.venue-stats {
+  display: flex;
+}
+.venue-rating,
+.venue-views,
+.venue-contacts {
+  display: inline-block;
+  margin-right: 10px;
+}
+.venue-layout {
+  display: flex;
+}
+.user-reviews {
+  flex: 1;
+  margin-top: 20px;
+  height: 200px;
+  overflow-y: scroll;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
