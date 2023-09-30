@@ -1,0 +1,258 @@
+header {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+}
+
+.site-name {
+  float: left;
+  margin-left: 10px;
+}
+.site-name__text {
+  color: #D79922; font-family: 'Gothic L', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
+  text-align: center;
+}
+
+main {
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+.h2-text {
+  color: #303C6C;
+  font-family: 'Gothic L', sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.default-text {
+  font-family: 'Gothic L', sans-serif;
+  font-size: 17px;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.paragraph-text {
+  font-family: 'Uni Sans', sans-serif;
+  font-size: 17px;
+  line-height: 2;
+}
+
+.basic-border {
+  border-radius: 5px;
+  border: 2px groove #E0E0E0;
+}
+
+.filters {
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  float: left;
+  top: 0;
+  width: 25%;
+  margin-top: 10px;
+}
+
+.filters__header {
+  margin-left: 10px;
+}
+
+.filter {
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+.filter__label {
+  color: #020202;
+  line-height: 24px;
+}
+
+.filters__button {
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 15px;
+  margin: 5px;
+  border: 0;
+  font-size: 16px;
+}
+
+.venues {
+  display: flex;
+  flex-direction: column;
+}
+
+.venues-content {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow-y: scroll;
+}
+
+.search {
+  float: right;
+  padding-top: 10px;
+}
+
+.search__input {
+  color: #303C6C;
+  width: 60%;
+  height: 20px;
+}
+
+.search__button {
+  color: #303C6C;
+  width: 15%;
+}
+
+.venue {
+  margin-top: 5px;
+  background-color: white;
+}
+
+.venue-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.venue__name {
+  margin-left: 10px;
+}
+
+.venue__name:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.photo-container {
+  position: relative;
+}
+
+.venue-info__photo {
+  border-radius: 5px;
+  opacity: 1;
+  display: flex;
+  width: 98%;
+  height: auto;
+  transition: .5s ease;
+  margin-left: 8px;
+}
+
+.photo-content {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.venue-info__description {
+  color: black;
+}
+
+.photo-container:hover .venue-info__photo {
+  opacity: 0.4;
+  filter: blur(2px);
+}
+
+.photo-container:hover .photo-content {
+  opacity: 1;
+}
+
+.venue-stats {
+  display: flex;
+}
+
+.stat {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.venue-stats__rating,
+.venue-stats__views,
+.venue-stats__contacts {
+  text-align: center;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.venue-content {
+  display: flex;
+  flex: 1;
+  max-height: 457px;
+}
+
+.venue-reviews {
+  flex: 1;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  border-radius: 10px;
+  background-color: white;
+  border: 2px groove #E0E0E0;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.venue-reviews::-webkit-scrollbar {
+  display: none;
+}
+
+.review {
+  margin-left: 5px;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.user {
+  display: flex;
+  flex-direction: row;
+}
+
+.user__name {
+  font-size: 20px;
+  line-height: 1;
+  margin-left: 10px;
+}
+
+.user__photo {
+  margin-top: 8px;
+  width: 8%;
+  height: 8%;
+}
+
+.review__text {
+  border-radius: 5px;
+  background-color: #f3f3f3;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 0;
+}

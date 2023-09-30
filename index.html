@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="ru">
+<html class="no-js" lang="ru" xmlns="http://www.w3.org/1999/html">
 
 <head>
   <meta charset="utf-8">
@@ -10,140 +10,180 @@
   <meta name="author" content="Андрей Гоголев">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
+<!--  <link rel="stylesheet" href="css/outline.css">-->
+  <link rel="stylesheet" href="css/styles.css">
   <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
-<header>
-  <div class="logo">
-    <pre>
-    ____________  _______
-   /  _/_  __/  |/  / __ \
-   / /  / / / /|_/ / / / /
- _/ /  / / / /  / / /_/ /
-/___/ /_/_/_/__/_/\____/____________  _____ ____________  __
-  / / / / | / /  _/ |  / / ____/ __ \/ ___//  _/_  __/\ \/ /
- / / / /  |/ // / | | / / __/ / /_/ /\__ \ / /  / /    \  /
-/ /_/ / /|  // /  | |/ / /___/ _, _/___/ // /  / /     / /
-\____/_/ |_/___/  |___/_____/_/ |_|/____/___/ /_/     /_/
-  </pre>
-  </div>
-  <div class="site-name">
-    <h1>Агрегатор заведений гастрономического туризма Санкт-Петербург</h1>
-  </div>
-  <nav>
-    <ol>
-      <li><a href="#venue-feed">Главная</a></li>
-      <li><a href="#code">Мой любимый алгоритм</a></li>
-      <li><a href="#quote">Моя любимая цитата</a></li>
-      <li><a href="#roadmap">Мои планы на сайт</a></li>
-      <li><a href="#contacts">Мои контакты</a></li>
-    </ol>
-  </nav>
+<header class="header">
+<div class="site-name">
+  <h1 class="site-name__text">Агрегатор заведений гастрономического туризма Санкт-Петербург</h1>
+</div>
 </header>
 <main>
-  <section class="filter-panel">
-    <label><input type="checkbox"> Фильтр 1</label><br>
-    <label><input type="checkbox"> Фильтр 2</label><br>
-    <label><input type="checkbox"> Фильтр 3</label><br>
-  </section>
-  <section class="venues-panel">
-  <div class="search-bar">
-    <input type="text" placeholder="Поиск">
-    <button>Найти</button>
+<section class="filters basic-border">
+  <h2 class="filters__header h2-text">Фильтры</h2>
+  <div class="filter">
+    <input class="filter__input" type="checkbox">
+    <label class="filter__label default-text">Фильтр</label>
   </div>
-
-  <div class="venue-feed" id="venue-feed">
-    <div class="venue-card">
-      <h2 class="venue-name"><i>The Office Pub</i></h2>
-      <img class="venue-photo" src="img/venue1.jpg" alt="Фото заведения">
-      <div class="venue-info">
-        <span class="venue-rating">Рейтинг: <b>4.5</b></span>
-        <span class="venue-views">Просмотры: <b>100</b></span>
-        <span class="venue-contacts">Контакты: <strong>телефон, email</strong></span>
+  <div class="filter">
+  <input class="filter__input" type="checkbox">
+  <label class="filter__label default-text">Фильтр</label>
+</div>
+  <div class="filter">
+    <input class="filter__input" type="checkbox">
+    <label class="filter__label default-text">Фильтр</label>
+  </div>
+  <div class="filter">
+    <input class="filter__input" type="checkbox">
+    <label class="filter__label default-text">Фильтр</label>
+  </div>
+  <div class="filter">
+    <input class="filter__input" type="checkbox">
+    <label class="filter__label default-text">Фильтр</label>
+  </div>
+  <div class="filter">
+    <input class="filter__input" type="checkbox">
+    <label class="filter__label default-text">Фильтр</label>
+  </div>
+  <button class="filters__button h2-text">Применить</button>
+</section>
+    <section class="venues-content">
+<div class="search">
+  <input class="search__input basic-border default-text" type="text" placeholder="Поиск">
+  <button class="search__button basic-border default-text">Найти</button>
+</div>
+<div class="venues">
+  <div class="venue basic-border">
+    <h2 class="venue__name h2-text">The Office Pub</h2>
+    <div class="venue-content">
+    <div class="venue-info">
+      <div class="photo-container">
+    <img class="venue-info__photo" src="img/venue1.jpg" alt="Фото заведения">
+        <div class="photo-content">
+        <p class="venue-info__description paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error explicabo maiores molestias, nobis optio quisquam reiciendis veritatis voluptas. Hic, placeat veritatis. Aspernatur, ducimus facere magnam officia quas soluta sunt suscipit?</p>
+        </div>
       </div>
-      <div class="user-reviews">
-        <div class="comment-card">
-          <h3>Пользователь 1</h3>
-          <p>Отзыв 1</p>
+      <div class="venue-stats">
+      <div class="venue-stats__rating default-text">Рейтинг: <span class="stat"> 4.5</span></div>
+      <div class="venue-stats__views default-text">Просмотры: <span class="stat"> 100</span></div>
+      <div class="venue-stats__contacts default-text">Контакты: <span class="stat"> Телефон, email</span></div>
+    </div>
+    </div>
+    <div class="venue-reviews">
+      <div class="review">
+        <div class="user">
+          <img class="user__photo" src="img/profile.png" alt="Аватар">
+          <h3 class="user__name default-text">Пользователь 1</h3>
         </div>
-        <div class="comment-card">
-          <h3>Пользователь 2</h3>
-          <p>Отзыв 2</p>
+        <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+      </div>
+      <div class="review">
+        <div class="user">
+          <img class="user__photo" src="img/profile.png" alt="Аватар">
+          <h3 class="user__name default-text">Пользователь 1</h3>
         </div>
-        <div class="comment-card">
-          <h3>Пользователь 3</h3>
-          <p>Отзыв 3</p>
+        <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+      </div>
+      <div class="review">
+        <div class="user">
+          <img class="user__photo" src="img/profile.png" alt="Аватар">
+          <h3 class="user__name default-text">Пользователь 1</h3>
+        </div>
+        <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="venue basic-border">
+    <h2 class="venue__name h2-text">The Office Pub</h2>
+    <div class="venue-content">
+      <div class="venue-info">
+        <div class="photo-container">
+          <img class="venue-info__photo" src="img/venue1.jpg" alt="Фото заведения">
+          <div class="photo-content">
+            <p class="venue-info__description paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error explicabo maiores molestias, nobis optio quisquam reiciendis veritatis voluptas. Hic, placeat veritatis. Aspernatur, ducimus facere magnam officia quas soluta sunt suscipit?</p>
+          </div>
+        </div>
+        <div class="venue-stats">
+          <div class="venue-stats__rating default-text">Рейтинг: <span class="stat"> 4.5</span></div>
+          <div class="venue-stats__views default-text">Просмотры: <span class="stat"> 100</span></div>
+          <div class="venue-stats__contacts default-text">Контакты: <span class="stat"> Телефон, email</span></div>
+        </div>
+      </div>
+      <div class="venue-reviews">
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+        </div>
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+        </div>
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
         </div>
       </div>
     </div>
   </div>
-  </section>
-  <section class="code" id="code">
-    <h2>Мой любимый алгоритм</h2>
-    <pre>
-      <code>
-class Solution {
-  public int search(int[] nums, int target) {
-    int left = 0;
-    int right = nums.length - 1;
-    while (left <= right) {
-      int mid = left + (right - left) / 2;
-      if (nums[mid] == target) {
-          return mid;
-      } else if (nums[mid] > target) {
-          right = mid - 1;
-      } else {
-          left = mid + 1;
-      }
-    }
-
-    return -1;
-  }
-}
-      </code>
-    </pre>
-  </section>
-  <section class="quote" id="quote">
-    <h2>Моя любимая цитата из фильма Карты Деньги Два Ствола</h2>
-    <blockquote>
-      <p>Те, кто верит – налетай. Те, кто жадный – убегай.
-        Отделяем мух от котлет, а тех, кто мне верит – от тех, кто нет.
-        Для вас свеженький товарчик, а для нас – солидный наварчик.
-        Товар без изъяна, товар без обмана. Надёжный, как пружина от дивана!
-        Берём мешками, мешками берём! Я вчера один полный взял и всего на 10 фунтов попал.
-        (О цепочке) Сработано руками итальянских мастеров. Украдено руками английских воров. Длинный, как моя рука – жаль, не всё у меня такое же длинное.
-        Не думайте, раз коробочки запечатанные – значит они пустые. Пустые коробки вам продаст только гробовщик.
-        Двигай сюда левой, правой ногой, остальное само пойдет – это называется ходьба.
-        Это для своей жены, это для чужой – будет хорошо, если вас не поймают с другой.
-        Не стой как школьник у борделя!
-        Это не краденое, просто за него не заплатили!
-        Кто сегодня не успеет – завтра крепко пожалеет.
-        Будешь долго ждать – я успею все продать.
-        У кого нет наличных, будет рыдать неприлично.</p>
-      <cite>Джейсон Стетхем</cite>
-    </blockquote>
-  </section>
-  <section class="roadmap" id="roadmap">
-    <h2>Мои планы на сайт</h2>
-    <ul>
-      <li><del>Придумать идею</del></li>
-      <li><del>Написать тэгов html для веселья</del></li>
-      <li>Начать и закончить какую-то курсовую</li>
-      <li><ins>Сделать дело гулять смело</ins></li>
-    </ul>
+  <div class="venue basic-border">
+    <h2 class="venue__name h2-text">The Office Pub</h2>
+    <div class="venue-content">
+      <div class="venue-info">
+        <div class="photo-container">
+          <img class="venue-info__photo" src="img/venue1.jpg" alt="Фото заведения">
+          <div class="photo-content">
+            <p class="venue-info__description paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error explicabo maiores molestias, nobis optio quisquam reiciendis veritatis voluptas. Hic, placeat veritatis. Aspernatur, ducimus facere magnam officia quas soluta sunt suscipit?</p>
+          </div>
+        </div>
+        <div class="venue-stats">
+          <div class="venue-stats__rating default-text">Рейтинг: <span class="stat"> 4.5</span></div>
+          <div class="venue-stats__views default-text">Просмотры: <span class="stat"> 100</span></div>
+          <div class="venue-stats__contacts default-text">Контакты: <span class="stat"> Телефон, email</span></div>
+        </div>
+      </div>
+      <div class="venue-reviews">
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+        </div>
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+        </div>
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
   </section>
 </main>
-<footer>
-  <p>2023 All rights reserved by Andrey Gogolev</p>
-  <p>Мои контакты:</p>
-  <ul id="contacts">
-    <li>
-      <a href="https://github.com/Nex0rus">Github</a></li>
-    <li>
-      <a href="https://t.me/Nex0rus">Telegram</a>
-    </li>
-  </ul>
+<footer class="footer">
+  <span class="footer__text">2023 All rights reserved by Andrey Gogolev</span>
 </footer>
 </body>
 
