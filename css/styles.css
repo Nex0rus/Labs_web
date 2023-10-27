@@ -1,28 +1,84 @@
 header {
   background-color: white;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 10px;
+  flex-direction: column;
+  padding: 0.5vw;
 }
 
 .site-name {
-  float: left;
+  align-self: flex-start;
   margin-left: 10px;
 }
 .site-name__text {
-  color: #D79922; font-family: 'Gothic L', sans-serif;
-  font-size: 3vw;
+  color: #D79922;
+  font-family: 'Concrete', sans-serif;
+  font-size: 2vw;
   font-weight: bold;
   line-height: 1;
   text-align: center;
 }
 
-main {
-  background-color: #f2f2f2;
+.navigation-container {
   display: flex;
   flex-direction: row;
-  padding: 10px;
+  align-items: center;
+  padding-bottom: 1vw;
+  padding-top: 1vw;
+}
+
+.nav__menu {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: space-around;
+}
+
+.nav {
+  flex: 1;
+  max-width: 25%;
+}
+
+.nav__link {
+  color: #303C6C;
+  padding: 0.25vw;
+}
+
+.current-page {
+  pointer-events: none;
+  outline: solid 0.2vw #303C6C;
+  border-radius: 0.2vw;
+  background-color: #42508c;
+}
+
+.current-page__text {
+  color: white;
+}
+
+.nav__link:hover {
+  outline: solid 0.2vw #303C6C;
+  border-radius: 0.3vw;
+  transition: outline 0.1s linear;
+}
+.nav__link:link {
+  text-decoration: none;
+}
+
+.nav__link:visited {
+  text-decoration: none;
+}
+
+main {
+  background-color: #f2f2f2;
+  padding: 0.7vw;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
 .footer {
@@ -40,8 +96,8 @@ main {
 }
 
 .basic-border {
-  border-radius: 2vw;
-  border: 2px groove #E0E0E0;
+  border-radius: 0.3vw;
+  border: 0.1vw groove #E0E0E0;
 }
 
 .filters {
@@ -50,13 +106,13 @@ main {
   display: flex;
   flex-direction: column;
   position: sticky;
-  float: left;
   top: 0;
-  width: 25%;
+  width: 15%;
   margin-top: 1vw;
 }
 
 .filters__header {
+  align-self: center;
   margin-left: 10px;
   text-align: left;
   max-width: 100%;
@@ -64,31 +120,33 @@ main {
 
 .filter {
   display: flex;
-
-  margin-top: 1vw;
-  margin-left: 2vw;
-  margin-bottom: 1vw;
+  margin-top: 0.5vw;
+  margin-left: 1vw;
+  margin-bottom: 0.2vw;
+  align-items: center;
 }
 
 .filter__label {
   color: #020202;
-  line-height: 24px;
-  margin-left: 1.5vw;
+  text-align: left;
+  margin-left: 1.2vw;
 
 }
 
 .filter__input {
-  height: 2vw;
-  width: 2vw;
+  height: 1.3vw;
+  width: 1.3vw;
 }
 
 .filters__button {
+  width: 80%;
   border-radius: 3vw;
   cursor: pointer;
   font-weight: bold;
   text-align: center;
-  padding: 1vw 1.5vw;
-  margin: 1vw;
+  align-self: center;
+  padding: 0.5vw 0.5vw;
+  margin: 0.5vw;
   border: 0;
 }
 
@@ -96,14 +154,8 @@ main {
   display: flex;
   flex-direction: column;
   margin-top: 0.5vw;
-}
-
-.venues-content {
   margin-left: 1vw;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  width: 75%;
+  max-width: 80%;
   overflow-y: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -113,9 +165,11 @@ main {
   display: flex;
   flex-direction: row;
   float: right;
-  margin-top: 1vw;
+  /*flex: 1;*/
   max-height: 3vw;
-  margin-left: 2vw;
+  height: 2vw;
+  margin-left: 7vw;
+  width: 50%;
 }
 
 .search__input {
@@ -131,8 +185,17 @@ main {
   height: auto;
 }
 
+.search__button:hover {
+  border: 0.1vw groove #303C6C;
+}
+
+.search__input:hover {
+  border-color: #303C6C;
+}
+
+
 .venue {
-  margin-top: 5px;
+  margin-top: 0.5vw;
   background-color: white;
 }
 
@@ -150,12 +213,24 @@ h2 {
 }
 
 .venue__name {
+  width: 25%;
   margin-left: 10px;
 }
 
-.venue__name:hover {
-  text-decoration: underline;
-  cursor: pointer;
+.venue__link {
+  color: #303C6C;
+}
+
+.venue__link:link {
+  text-decoration: none;
+}
+
+.venue__link:visited {
+  text-decoration: none;
+}
+
+.venue__link:hover{
+  text-shadow: 0 0 0.15vw #D79922;
 }
 
 .photo-container {
@@ -165,14 +240,14 @@ h2 {
 }
 
 .venue-info__photo {
-  border-radius: 5px;
+  border-radius: 0.5vw;
   opacity: 1;
   display: flex;
   height: auto;
   width: 100%;
   max-width: 100%;
   transition: .5s ease;
-  box-shadow: 0 26px 58px 0 rgba(0, 0, 0, .22), 0 5px 14px 0 rgba(0, 0, 0, .18);
+  box-shadow: 0 1.5vw 3vw 0 rgba(0, 0, 0, .22), 0 0.5vw 0.7vw 0 rgba(0, 0, 0, .18);
 }
 
 .photo-content {
@@ -183,9 +258,6 @@ h2 {
   left: 50%;
   width: 94%;
   max-width: 100%;
-  overflow-y: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
   max-height: 95%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -197,7 +269,7 @@ h2 {
 
 .photo-container:hover .venue-info__photo {
   opacity: 0.4;
-  filter: blur(2px);
+  filter: blur(0.25vw);
 }
 
 .photo-container:hover .photo-content {
@@ -222,16 +294,11 @@ h2 {
   margin-bottom: 0.5vw;
 }
 
-.venue-content {
-  display: flex;
-  flex-direction: column;
-}
-
 .h2-text {
   max-width: 100%;
   color: #303C6C;
-  font-family: 'Gothic L', sans-serif;
-  font-size: 3vw;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2vw;
   font-weight: bold;
   line-height: 1;
 }
@@ -239,34 +306,58 @@ h2 {
 .confirm-button-text {
   max-width: 100%;
   color: #303C6C;
-  font-family: 'Gothic L', sans-serif;
-  font-size: 2vw;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2vw;
   font-weight: bold;
   line-height: 1;
 }
 
 .default-text {
-  font-family: 'Gothic L', sans-serif;
-  font-size: 2vw;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1vw;
+  letter-spacing: 0.1em;
   line-height: 1;
 }
 
 .paragraph-text {
-  font-family: 'Uni Sans', sans-serif;
-  font-size: 2vw;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.1em;
+  font-size: 1vw;
   line-height: 2;
 }
 
-.venue-reviews .review:nth-child(even) {
-  align-items: flex-end;
+
+.user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 3vw;
 }
 
-.venue-reviews .review:nth-child(even) .review__text {
-  border-radius: 5px;
-  background-color: #cecece;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 1vw;
+.user__name {
+  flex: 1;
+  font-size: 1.2vw;
+  line-height: 1;
+  margin-left: 1vw;
+}
+
+/*.venue-reviews .review:nth-child(even) {*/
+/*  align-items: flex-end;*/
+/*}*/
+
+/*.venue-reviews .review:nth-child(even) .review__text {*/
+/*  border-radius: 5px;*/
+/*  background-color: #cecece;*/
+/*  margin-left: 10px;*/
+/*  margin-right: 10px;*/
+/*  margin-top: 1vw;*/
+/*}*/
+
+.user__photo {
+  max-width: 50%;
+  max-height: 50%;
+  object-fit: contain;
+
 }
 
 .venue-reviews {
@@ -274,12 +365,15 @@ h2 {
   overflow-y: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  border-radius: 10px;
   background-color: white;
-  border: 2px groove #E0E0E0;
   margin-left: 0.5vw;
   margin-right: 0.5vw;
   margin-bottom: 0.5vw;
+}
+
+.venue-content {
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: 630px) {
@@ -301,36 +395,16 @@ h2 {
 
 .review {
   margin-left: 5px;
-  margin-top: 5px;
+  margin-bottom: 0.5vw;
   display: flex;
   flex-direction: column;
 }
 
-.user {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 5vw;
-}
-
-.user__name {
-  flex: 1;
-  font-size: 2vw;
-  line-height: 1;
-  margin-left: 1vw;
-}
-
-.user__photo {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-
-}
-
 .review__text {
-  border-radius: 5px;
+  border-radius: 0.5vw;
   background-color: #f3f3f3;
   margin-left: 10px;
   margin-right: 10px;
   margin-top: 1vw;
+  padding: 0.5vw;
 }

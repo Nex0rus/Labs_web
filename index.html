@@ -10,19 +10,40 @@
   <meta name="author" content="Андрей Гоголев">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
-<!--  <script src="js/main.js"></script>-->
-<!--  <link rel="stylesheet" href="css/outline.css">-->
+  <link href="https://fonts.cdnfonts.com/css/bebas-neue" rel="stylesheet">
+  <script src="js/menu.js" defer></script>
+  <script src="js/loadtime.js" defer></script>
   <link rel="stylesheet" href="css/styles.css">
   <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
 <header class="header">
-<div class="site-name">
-  <h1 class="site-name__text">Агрегатор заведений гастрономического туризма Санкт-Петербург</h1>
-</div>
+<!--<div class="site-name">-->
+<!--  <h1 class="site-name__text">Агрегатор заведений гастрономического туризма Санкт-Петербург</h1>-->
+<!--</div>-->
+  <div class="navigation-container">
+  <div class="search">
+    <input class="search__input basic-border default-text" type="text" placeholder="Поиск">
+    <button class="search__button basic-border default-text">Найти</button>
+  </div>
+  <nav class="nav">
+    <ul class="nav__menu">
+      <li class="nav__item h2-text">
+        <a class="nav__link" href="index.html">Лента</a>
+      </li>
+      <li class="nav__item h2-text">
+        <a class="nav__link" href="top.html">Топ</a>
+      </li>
+      <li class="nav__item h2-text">
+        <a class="nav__link" href="contacts.html">Контакты</a>
+      </li>
+    </ul>
+  </nav>
+  </div>
 </header>
 <main>
+  <div class="content">
 <section class="filters basic-border">
   <h2 class="filters__header h2-text">Фильтры</h2>
   <div class="filter">
@@ -51,14 +72,9 @@
   </div>
   <button class="filters__button confirm-button-text">Применить</button>
 </section>
-    <section class="venues-content">
-<div class="search">
-  <input class="search__input basic-border default-text" type="text" placeholder="Поиск">
-  <button class="search__button basic-border default-text">Найти</button>
-</div>
-<div class="venues">
+<section id="venues" class="venues">
   <div class="venue basic-border">
-    <h2 class="venue__name h2-text">The Office Pub</h2>
+    <h2 class="venue__name h2-text"><a class="venue__link" href="#">The Office Pub</a></h2>
     <div class="venue-content">
     <div class="venue-info">
       <div class="photo-container">
@@ -162,7 +178,7 @@
     </div>
   </div>
   <div class="venue basic-border">
-    <h2 class="venue__name h2-text">The Office Pub</h2>
+    <h2 class="venue__name h2-text"><a class="venue__link" href="#">The Office Pub</a></h2>
     <div class="venue-content">
       <div class="venue-info">
         <div class="photo-container">
@@ -178,6 +194,69 @@
         </div>
       </div>
       <div class="venue-reviews">
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+        </div>
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+        </div>
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+        </div>
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+        </div>
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+        </div>
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+        </div>
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+        </div>
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+        </div>
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+        </div>
         <div class="review">
           <div class="user">
             <img class="user__photo" src="img/profile.png" alt="Аватар">
@@ -203,7 +282,7 @@
     </div>
   </div>
   <div class="venue basic-border">
-    <h2 class="venue__name h2-text">The Office Pub</h2>
+    <h2 class="venue__name h2-text"><a class="venue__link" href="#">The Office Pub</a></h2>
     <div class="venue-content">
       <div class="venue-info">
         <div class="photo-container">
@@ -219,6 +298,69 @@
         </div>
       </div>
       <div class="venue-reviews">
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+        </div>
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+        </div>
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+        </div>
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+        </div>
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+        </div>
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+        </div>
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+        </div>
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+        </div>
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+        </div>
         <div class="review">
           <div class="user">
             <img class="user__photo" src="img/profile.png" alt="Аватар">
@@ -244,7 +386,7 @@
     </div>
   </div>
   <div class="venue basic-border">
-    <h2 class="venue__name h2-text">The Office Pub</h2>
+    <h2 class="venue__name h2-text"><a class="venue__link" href="#">The Office Pub</a></h2>
     <div class="venue-content">
       <div class="venue-info">
         <div class="photo-container">
@@ -260,6 +402,69 @@
         </div>
       </div>
       <div class="venue-reviews">
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+        </div>
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+        </div>
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+        </div>
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+        </div>
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+        </div>
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+        </div>
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+        </div>
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+        </div>
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+        </div>
         <div class="review">
           <div class="user">
             <img class="user__photo" src="img/profile.png" alt="Аватар">
@@ -285,7 +490,7 @@
     </div>
   </div>
   <div class="venue basic-border">
-    <h2 class="venue__name h2-text">The Office Pub</h2>
+    <h2 class="venue__name h2-text"><a class="venue__link" href="#">The Office Pub</a></h2>
     <div class="venue-content">
       <div class="venue-info">
         <div class="photo-container">
@@ -322,13 +527,77 @@
           </div>
           <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
         </div>
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+        </div>
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+        </div>
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+        </div>
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+        </div>
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+        </div>
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+        </div>
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+        </div>
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+        </div>
+        <div class="review">
+          <div class="user">
+            <img class="user__photo" src="img/profile.png" alt="Аватар">
+            <h3 class="user__name default-text">Пользователь 1</h3>
+          </div>
+          <p class="review__text paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam autem doloremque ea, excepturi exercitationem illum impedit porro sapiente tenetur. Aut cum debitis fugit illo ipsum iste, obcaecati quas tempora.</p>
+        </div>
       </div>
     </div>
   </div>
-</div>
-  </section>
+</section>
+  </div>
 </main>
 <footer class="footer">
+  <span id="pageLoadTime"></span>
   <span class="footer__text">2023 All rights reserved by Andrey Gogolev</span>
 </footer>
 </body>
