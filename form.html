@@ -1,0 +1,119 @@
+<!doctype html>
+<html class="no-js" lang="ru" xmlns="http://www.w3.org/1999/html">
+
+<head>
+  <meta charset="utf-8">
+  <title>Барная Карта</title>
+  <meta name="description" content="Агрегатор ресторанов, баров и пабов Петербурга">
+  <meta name="keywords" content="рестораны, бары, пабы, Санкт-Петербург">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Андрей Гоголев">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/form.css">
+  <link href="https://fonts.cdnfonts.com/css/bebas-neue" rel="stylesheet">
+  <script src="js/menu.js"></script>
+  <script src="js/loadtime.js" defer></script>
+  <script src="js/create-card.js" defer></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <meta name="theme-color" content="#fafafa">
+</head>
+<body>
+<header class="header">
+  <!--<div class="site-name">-->
+  <!--  <h1 class="site-name__text">Агрегатор заведений гастрономического туризма Санкт-Петербург</h1>-->
+  <!--</div>-->
+  <div class="navigation-container">
+    <div class="search">
+      <input class="search__input basic-border default-text" type="text" placeholder="Поиск">
+      <button class="search__button basic-border default-text">Найти</button>
+    </div>
+    <nav class="nav">
+      <ul class="nav__menu">
+        <li class="nav__item h2-text">
+          <a class="nav__link" href="index.html">Лента</a>
+        </li>
+        <li class="nav__item h2-text">
+          <a class="nav__link" href="top.html">Топ</a>
+        </li>
+        <li class="nav__item h2-text">
+          <a class="nav__link" href="contacts.html">Контакты</a>
+        </li>
+        <li class="nav__item h2-text">
+          <a class="nav__link" href="form.html">Форма</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="form-page-content">
+    <div class="container">
+      <h2 class="h2-text">
+        Добавить заведение
+      </h2>
+      <form id="create-form" class="create-form" action="#">
+        <div class="form-row">
+          <div class="input-data">
+            <input class="form-input" id="name" type="text" required>
+            <div class="underline"></div>
+            <label class="default-text" for="name">Название</label>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="input-data">
+            <input class="form-input" id="email" type="text" required>
+            <div class="underline"></div>
+            <label class="default-text" for="email">Email</label>
+          </div>
+          <div class="input-data">
+            <input class="form-input" id="phone-number" type="text" required>
+            <div class="underline"></div>
+            <label class="default-text" for="phone-number">Номер телефона</label>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="input-data">
+            <input class="form-input" id="rating" type="text" required>
+            <div class="underline"></div>
+            <label class="default-text" for="rating">Рейтинг</label>
+          </div>
+          <div class="input-data">
+              <input class="form-input" id="url" type="text">
+            <div class="underline"></div>
+            <label for="url" class="default-text">Ссылка</label>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="input-photo">
+            <input class="default-text" id="add-photo" type="file" required>
+          <label class="default-text" for="add-photo">Добавить фото</label>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="input-data textarea">
+            <textarea class="form-input" id="description" rows="4" cols="80" required></textarea>
+            <br />
+            <div class="underline"></div>
+            <label class="default-text" for="description">Описание</label>
+            <br />
+          </div>
+        </div>
+          <div class="form-row submit-btn">
+            <div class="input-data">
+              <div class="inner"></div>
+              <input class="default-text" id="submit" type="submit">
+            </div>
+          </div>
+      </form>
+    </div>
+    <section id="venues" class="venues">
+    </section>
+  </div>
+</main>
+<footer class="footer">
+  <span id="pageLoadTime"></span>
+  <span class="footer__text">2023 All rights reserved by Andrey Gogolev</span>
+</footer>
+</body>
+</html>

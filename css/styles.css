@@ -76,7 +76,17 @@ main {
 
 .content {
   display: flex;
+  justify-content: center;
   flex-direction: row;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.form-page-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-left: 2%;
   margin-right: 2%;
 }
@@ -159,6 +169,10 @@ main {
   overflow-y: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+.venues::-webkit-scrollbar {
+  display: none;
 }
 
 .search {
