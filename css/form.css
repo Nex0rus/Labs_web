@@ -106,10 +106,6 @@ form .form-row .textarea{
   padding: 1rem 52px;
   position: relative;
   vertical-align: middle;
-
-  &:hover {
-    left: 0;
-  }
 }
 
 .input-photo {
