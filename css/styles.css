@@ -355,18 +355,6 @@ h2 {
   margin-left: 1vw;
 }
 
-/*.venue-reviews .review:nth-child(even) {*/
-/*  align-items: flex-end;*/
-/*}*/
-
-/*.venue-reviews .review:nth-child(even) .review__text {*/
-/*  border-radius: 5px;*/
-/*  background-color: #cecece;*/
-/*  margin-left: 10px;*/
-/*  margin-right: 10px;*/
-/*  margin-top: 1vw;*/
-/*}*/
-
 .user__photo {
   max-width: 50%;
   max-height: 50%;
@@ -421,4 +409,31 @@ h2 {
   margin-right: 10px;
   margin-top: 1vw;
   padding: 0.5vw;
+}
+
+.preloader {
+  border: 0.3vw solid #f3f3f3;
+  border-top: 0.3vw solid #303C6C;
+  border-radius: 50%;
+  width: 6vw;
+  height: 6vw;
+  animation: spin 2s linear infinite;
+  margin: 0 auto;
+  position: relative;
+  top: 8vw
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.error {
+  position: relative;
+  top: 10vw;
+  left: 10vw;
 }
